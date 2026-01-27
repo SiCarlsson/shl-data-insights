@@ -1,0 +1,5 @@
+# HIDDEN API endpoints to implement:
+
+
+# HAVE TO SCRAPE:
+STATS_URL = https://stats.swehockey.se/
