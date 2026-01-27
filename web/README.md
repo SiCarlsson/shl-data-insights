@@ -31,12 +31,6 @@ app/
   globals.css        # Global styles
 ```
 
-## External API
-
-Data is fetched from the official SHL API:
-
-- Players by team: `https://www.shl.se/api/sports-v2/athletes/by-team-uuid/{uuid}`
-
 ## Tech Stack
 
 - **Framework:** Next.js 16 (App Router)
