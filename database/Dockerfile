@@ -1,4 +1,4 @@
-FROM postgres:16
+FROM postgres:17
 
 # Copy schema files
 COPY schemas/ /docker-entrypoint-initdb.d/
