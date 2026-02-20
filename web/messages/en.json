@@ -2,5 +2,10 @@
   "HomePage": {
     "title": "SHL Data Insights",
     "description": "Explore and analyze SHL data."
+  },
+  "Footer": {
+    "copyright": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
   }
 }
