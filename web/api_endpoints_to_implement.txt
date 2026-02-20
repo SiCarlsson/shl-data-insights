@@ -1,4 +1,31 @@
-# HIDDEN API endpoints to implement:
+# SHL API endpoints to implement in Spring Boot:
+
+# Reference data (seasons, series, game types)
+GET https://www.shl.se/api/sports-v2/season-series-game-types-filter
+  - Returns all seasons, series, game types, and the default (current) filter
+  - Used to populate reference.seasons, reference.series, reference.game_types
+
+# Game schedule
+GET https://www.shl.se/api/sports-v2/game-schedule
+  - Params: seasonUuid, seriesUuid, gameTypeUuid
+  - Returns full game schedule for a given season/series/game type combination
+  - Used to populate bronze.shl_game_schedule
+
+# Team information
+GET https://www.shl.se/api/sports-v2/teams/{teamUuid}
+  - Returns team info: founding year, championships (golds), finals appearances, etc.
+  - Example SHL page: https://www.shl.se/team/2459-2459QTs1f/dif1_dif/squad
+
+# Team roster (players by position group)
+GET https://www.shl.se/api/sports-v2/athletes/by-team-uuid/{teamUuid}
+  - Returns players organized by position groups for a specific team
+  - Example SHL page: https://www.shl.se/team/2459-2459QTs1f/dif1_dif/squad
+
+# Player stats summary for a team
+GET https://www.shl.se/api/statistics-v2/stats-info/players_summary
+  - Params: teamUuid, module=players_summary, count=50
+  - Returns top 50 players with highest points for a specific team
+  - Example SHL page: https://www.shl.se/team/2459-2459QTs1f/dif1_dif/stats
 
 
 # HAVE TO SCRAPE:
