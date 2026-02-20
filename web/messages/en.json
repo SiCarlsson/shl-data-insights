@@ -7,5 +7,13 @@
     "copyright": "All rights reserved.",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service"
+  },
+  "PrivacyPage": {
+    "title": "Privacy Policy",
+    "description": "Your privacy is important to us."
+  },
+  "TermsOfServicePage": {
+    "title": "Terms of Service",
+    "description": "Please read our terms of service carefully."
   }
 }
