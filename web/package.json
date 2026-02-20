@@ -1,5 +1,5 @@
 {
-  "name": "fantasy-shl-data-insights",
+  "name": "shl-data-insights",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,7 +12,7 @@
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
     "test:integration": "vitest run test/integration",
-    "prepare": "husky"
+    "prepare": "cd .. && git config core.hooksPath web/.husky"
   },
   "dependencies": {
     "axios": "^1.13.2",
