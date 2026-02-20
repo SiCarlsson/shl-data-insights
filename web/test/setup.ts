@@ -1,6 +1,6 @@
-import { beforeAll, afterAll } from "vitest";
-import { config } from "dotenv";
 import { resolve } from "path";
+import { config } from "dotenv";
+import { beforeAll, afterAll } from "vitest";
 
 config({ path: resolve(__dirname, "../../.env") });
 
