@@ -1,3 +1,2 @@
 cd web
-pnpm format
-pnpm lint
+pnpm exec lint-staged
