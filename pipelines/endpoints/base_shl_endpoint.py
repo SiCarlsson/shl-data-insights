@@ -5,9 +5,9 @@ import httpx
 logger = logging.getLogger(__name__)
 
 
-class SHLClient:
+class SHLBaseEndpoint:
     """
-    A client for interacting with the SHL Data API.
+    A base class for SHL API endpoints.
     """
 
     BASE_URL = "https://www.shl.se/api/"
@@ -15,7 +15,7 @@ class SHLClient:
     def __init__(self, timeout: int = 10):
         self.timeout = timeout
 
-    def get(self, path: str, params: dict = None) -> dict:
+    def fetch(self, path: str, params: dict = None) -> dict:
         url = f"{self.BASE_URL}{path}"
         logger.info(f"Making GET request to {url} with params {params}")
         try:

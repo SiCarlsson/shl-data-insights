@@ -15,4 +15,4 @@ select = [
 ignore = []
 
 [tool.pytest.ini_options]
-testpaths = ["api/tests"]
+testpaths = ["pipelines/tests"]

@@ -2,11 +2,11 @@
 
 # Reference data (seasons, series, game types)
 GET https://www.shl.se/api/sports-v2/season-series-game-types-filter
-  - Returns all seasons, series, game types, and the default (current) filter
+  - Returns all seasons, series, game types, and the default (current) filter with their uuids
   - Used to populate reference.seasons, reference.series, reference.game_types
 
 # Game schedule
-GET https://www.shl.se/api/sports-v2/game-schedule
+GET https://www.shl.se/api/sports-v2/game-schedule/{seasonUuid}
   - Params: seasonUuid, seriesUuid, gameTypeUuid
   - Returns full game schedule for a given season/series/game type combination
   - Used to populate bronze.shl_game_schedule
