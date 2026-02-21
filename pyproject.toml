@@ -1,0 +1,15 @@
+[tool.black]
+line-length = 88
+target-version = ["py313"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes (unused imports, undefined names)
+    "I",   # isort (import sorting)
+]
+ignore = []
