@@ -1,0 +1,48 @@
+# SHL Data Insights - Tech Stack
+
+## Architecture
+SHL API → Python (fetch) → Supabase/PostgreSQL (raw) → dbt (transform) → BigQuery (analytics) → Next.js (display)
+
+## Layers
+
+### Data Ingestion
+- Tool: Python scripts
+- Location: fetch/
+- Purpose: Fetch raw data from SHL open API
+
+### Raw Storage
+- Tool: Supabase (PostgreSQL)
+- Purpose: Store raw/operational data, serve data to Next.js
+
+### Transformation
+- Tool: dbt
+- Location: dbt/
+- Purpose: Clean and model raw data
+
+### Analytics / Data Warehouse
+- Tool: BigQuery (Google Cloud)
+- Free tier: 10GB storage, 1TB queries/month
+- Purpose: Analytical queries and reporting
+
+### Frontend
+- Tool: Next.js
+- Host: Vercel (free)
+- URL: shl.simoncarlsson.se
+
+### CI/CD
+- Tool: GitHub Actions
+- Workflows:
+  - ci.yml: Linting and tests on push to main
+  - cd.yml: Deploy to Vercel when CI passes
+  - pipeline.yml: Scheduled data pipeline (fetch + dbt)
+
+### Orchestration
+- Tool: GitHub Actions (scheduled workflows)
+- Schedule: Daily at 6am
+- Manual trigger: workflow_dispatch
+
+## Hosting
+- Frontend: Vercel (free)
+- Database: Supabase (free tier)
+- Data Warehouse: BigQuery (free tier)
+- Orchestration: GitHub Actions (free)
