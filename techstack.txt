@@ -7,7 +7,6 @@ SHL API → Python (fetch) → Supabase/PostgreSQL (raw) → dbt (transform) →
 
 ### Data Ingestion
 - Tool: Python scripts
-- Location: fetch/
 - Purpose: Fetch raw data from SHL open API
 
 ### Raw Storage
@@ -16,17 +15,19 @@ SHL API → Python (fetch) → Supabase/PostgreSQL (raw) → dbt (transform) →
 
 ### Transformation
 - Tool: dbt
-- Location: dbt/
 - Purpose: Clean and model raw data
 
 ### Analytics / Data Warehouse
 - Tool: BigQuery (Google Cloud)
-- Free tier: 10GB storage, 1TB queries/month
 - Purpose: Analytical queries and reporting
+
+### Infrastructure as Code
+- Tool: Terraform
+- Purpose: Manage BigQuery datasets, tables and GCP resources
 
 ### Frontend
 - Tool: Next.js
-- Host: Vercel (free)
+- Host: Vercel
 - URL: shl.simoncarlsson.se
 
 ### CI/CD
@@ -38,7 +39,6 @@ SHL API → Python (fetch) → Supabase/PostgreSQL (raw) → dbt (transform) →
 
 ### Orchestration
 - Tool: GitHub Actions (scheduled workflows)
-- Schedule: Daily at 6am
 - Manual trigger: workflow_dispatch
 
 ## Hosting
