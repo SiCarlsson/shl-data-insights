@@ -1,3 +1,5 @@
+> ⚠️ **Under Construction** — This project is actively being developed.
+
 # SHL Data Insights 
 
 Data pipeline and analytics platform for Swedish Hockey League (SHL) data, built to power fantasy hockey insights and statistics.
