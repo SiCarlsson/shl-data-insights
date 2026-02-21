@@ -12,7 +12,7 @@
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
     "test:integration": "vitest run test/integration",
-    "prepare": "cd .. && git config core.hooksPath web/.husky"
+    "prepare": "cd .. && git config core.hooksPath .husky"
   },
   "lint-staged": {
     "**/*.{ts,tsx,js,json,css}": [
