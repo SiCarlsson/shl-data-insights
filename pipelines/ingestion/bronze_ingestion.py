@@ -22,7 +22,9 @@ class BronzeIngestion:
             json_data (dict): The JSON data to be ingested.
         """
         try:
-            self.client.schema("bronze").table(table_name).insert({"raw_data": json_data}).execute()
+            self.client.schema("bronze").table(table_name).insert(
+                {"raw_data": json_data}
+            ).execute()
             self.logger.info(f"Successfully ingested data into bronze.{table_name}")
         except Exception as e:
             self.logger.exception(
