@@ -20,3 +20,19 @@ Ingest, transform, and analyze SHL game and player data to provide actionable in
 - TypeScript
 - Vitest
 - Docker
+
+## Installation
+
+**Python** (pipelines):
+
+```bash
+pip install -r requirements.txt
+pip install -r requirements-dev.txt  # for dev dependencies
+```
+
+**Next.js** (`web/`):
+
+```bash
+cd web
+pnpm install
+```
