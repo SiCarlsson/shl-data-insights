@@ -25,7 +25,7 @@ class SHLBaseEndpoint:
 
         Returns:
             dict: The JSON response from the API.
-            
+
         Raises:
             httpx.HTTPStatusError: If the response status code indicates an error.
             httpx.RequestError: If there was an issue making the request.
