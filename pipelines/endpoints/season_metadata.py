@@ -9,6 +9,9 @@ class SeasonMetadataEndpoint(SHLBaseEndpoint):
     def get(self) -> dict:
         """
         Fetches all available seasons and their metadata.
+
+        Returns:
+            dict: A dictionary containing season metadata.
         """
         path = "sports-v2/season-series-game-types-filter"
         return self.fetch(path)

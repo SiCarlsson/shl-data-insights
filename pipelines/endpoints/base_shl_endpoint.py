@@ -16,6 +16,20 @@ class SHLBaseEndpoint:
         self.timeout = timeout
 
     def fetch(self, path: str, params: dict = None) -> dict:
+        """
+        Fetches data from the SHL API for the given endpoint path.
+
+        Args:
+            path (str): The endpoint path to fetch data from.
+            params (dict, optional): Query parameters to include in the request.
+
+        Returns:
+            dict: The JSON response from the API.
+            
+        Raises:
+            httpx.HTTPStatusError: If the response status code indicates an error.
+            httpx.RequestError: If there was an issue making the request.
+        """
         url = f"{self.BASE_URL}{path}"
         logger.info(f"Making GET request to {url} with params {params}")
         try:
