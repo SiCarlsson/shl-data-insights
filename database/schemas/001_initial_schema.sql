@@ -12,6 +12,10 @@
 
 BEGIN;
 
+CREATE SCHEMA IF NOT EXISTS bronze;
+CREATE SCHEMA IF NOT EXISTS silver;
+CREATE SCHEMA IF NOT EXISTS reference;
+
 CREATE TABLE IF NOT EXISTS silver.shl_teams
 (
     team_id serial,
