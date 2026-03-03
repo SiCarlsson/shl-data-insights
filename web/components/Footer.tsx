@@ -16,7 +16,7 @@ export function Footer() {
 
   const links = [
     { key: "privacyPolicy", href: "/privacy" },
-    { key: "termsOfService", href: "/tos" },
+    { key: "termsOfService", href: "/termsofservice" },
   ];
 
   return (
