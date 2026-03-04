@@ -81,36 +81,36 @@ END $$;
 
 -- Add foreign key constraints
 ALTER TABLE IF EXISTS silver.shl_games
-    DROP CONSTRAINT IF EXISTS "Season uuid";
+DROP CONSTRAINT IF EXISTS "Season_uuid";
 
 ALTER TABLE IF EXISTS silver.shl_games
-    ADD CONSTRAINT "Season uuid" FOREIGN KEY (season_uuid)
-    REFERENCES reference.seasons (season_uuid) MATCH SIMPLE
-    ON UPDATE NO ACTION
-    ON DELETE NO ACTION
-    NOT VALID;
+ADD CONSTRAINT "Season_uuid" FOREIGN KEY (season_uuid)
+REFERENCES reference.seasons (season_uuid) MATCH SIMPLE
+ON UPDATE NO ACTION
+ON DELETE NO ACTION
+NOT VALID;
 
 ALTER TABLE IF EXISTS silver.shl_games
-    DROP CONSTRAINT IF EXISTS "Series uuid";
+DROP CONSTRAINT IF EXISTS "Series_uuid";
 
 ALTER TABLE IF EXISTS silver.shl_games
-    ADD CONSTRAINT "Series uuid" FOREIGN KEY (series_uuid)
-    REFERENCES reference.series (series_uuid) MATCH SIMPLE
-    ON UPDATE NO ACTION
-    ON DELETE NO ACTION
-    NOT VALID;
+ADD CONSTRAINT "Series_uuid" FOREIGN KEY (series_uuid)
+REFERENCES reference.series (series_uuid) MATCH SIMPLE
+ON UPDATE NO ACTION
+ON DELETE NO ACTION
+NOT VALID;
 
 ALTER TABLE IF EXISTS silver.shl_games
-    DROP CONSTRAINT IF EXISTS "Game type uuid";
+DROP CONSTRAINT IF EXISTS "Game_type_uuid";
 
 ALTER TABLE IF EXISTS silver.shl_games
-    ADD CONSTRAINT "Game type uuid" FOREIGN KEY (game_type_uuid)
-    REFERENCES reference.game_types (game_type_uuid) MATCH SIMPLE
-    ON UPDATE NO ACTION
-    ON DELETE NO ACTION
-    NOT VALID;
+ADD CONSTRAINT "Game_type_uuid" FOREIGN KEY (game_type_uuid)
+REFERENCES reference.game_types (game_type_uuid) MATCH SIMPLE
+ON UPDATE NO ACTION
+ON DELETE NO ACTION
+NOT VALID;
 
 -- Create index on is_current for quick lookups
-CREATE INDEX IF NOT EXISTS idx_seasons_is_current ON reference.seasons(is_current) WHERE is_current = true;
+CREATE INDEX IF NOT EXISTS idx_seasons_is_current ON reference.seasons (is_current) WHERE is_current = true;
 
 END;

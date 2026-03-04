@@ -88,23 +88,23 @@ CREATE TABLE IF NOT EXISTS silver.shl_games
 );
 
 ALTER TABLE IF EXISTS silver.shl_players
-    ADD FOREIGN KEY (team_id)
-    REFERENCES silver.shl_teams (team_id) MATCH SIMPLE
-    ON UPDATE NO ACTION
-    ON DELETE NO ACTION;
+ADD FOREIGN KEY (team_id)
+REFERENCES silver.shl_teams (team_id) MATCH SIMPLE
+ON UPDATE NO ACTION
+ON DELETE NO ACTION;
 
 
 ALTER TABLE IF EXISTS silver.shl_games
-    ADD FOREIGN KEY (home_team_id)
-    REFERENCES silver.shl_teams (team_id) MATCH SIMPLE
-    ON UPDATE NO ACTION
-    ON DELETE NO ACTION;
+ADD FOREIGN KEY (home_team_id)
+REFERENCES silver.shl_teams (team_id) MATCH SIMPLE
+ON UPDATE NO ACTION
+ON DELETE NO ACTION;
 
 
 ALTER TABLE IF EXISTS silver.shl_games
-    ADD FOREIGN KEY (away_team_id)
-    REFERENCES silver.shl_teams (team_id) MATCH SIMPLE
-    ON UPDATE NO ACTION
-    ON DELETE NO ACTION;
+ADD FOREIGN KEY (away_team_id)
+REFERENCES silver.shl_teams (team_id) MATCH SIMPLE
+ON UPDATE NO ACTION
+ON DELETE NO ACTION;
 
 END;
