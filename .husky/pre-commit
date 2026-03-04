@@ -2,11 +2,12 @@ cd web && pnpm exec lint-staged
 cd ..
 
 source venv/bin/activate
-pre-commit run
+pre-commit run 
+EXIT_CODE=$?
 
-# If pre-commit modified files, stage and re-commit with same message
-if ! git diff --quiet; then
-    echo "\n\nPre-commit modified files. Staging and re-committing..."
+# If pre-commit modified files and re-stages and re-commits
+if [ $EXIT_CODE -ne 0 ]; then
+    printf "\n\nPre-commit modified files. Staging and re-committing..."
     git add -A
     git commit -m "$(cat .git/COMMIT_EDITMSG)"
 fi
