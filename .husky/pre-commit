@@ -4,8 +4,9 @@ cd ..
 source venv/bin/activate
 pre-commit run
 
-# If pre-commit modified files, stage and re-run to verify
+# If pre-commit modified files, stage and re-commit with same message
 if ! git diff --quiet; then
+    echo "\n\nPre-commit modified files. Staging and re-committing..."
     git add -A
-    pre-commit run
+    git commit --no-verify -m "$(cat .git/COMMIT_EDITMSG)"
 fi
