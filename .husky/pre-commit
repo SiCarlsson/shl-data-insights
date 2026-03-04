@@ -3,11 +3,3 @@ cd ..
 
 source venv/bin/activate
 pre-commit run
-EXIT_CODE=$?
-
-# If pre-commit modified and auto-fixed files, re-stage and re-commit with same message
-if [ "$EXIT_CODE" -ne 0 ]; then
-    printf "\nPre-commit modified files. Staging and re-committing...\n\n"
-    git add -A
-    git commit --no-verify -m "$(cat .git/COMMIT_EDITMSG)"
-fi
