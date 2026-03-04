@@ -8,5 +8,5 @@ pre-commit run
 if ! git diff --quiet; then
     echo "\n\nPre-commit modified files. Staging and re-committing..."
     git add -A
-    git commit --no-verify -m "$(cat .git/COMMIT_EDITMSG)"
+    git commit -m "$(cat .git/COMMIT_EDITMSG)"
 fi
