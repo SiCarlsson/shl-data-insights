@@ -7,12 +7,12 @@ BEGIN;
 DO $$
 BEGIN
     IF NOT EXISTS (
-        SELECT 1 FROM information_schema.columns 
-        WHERE table_schema = 'reference' 
-        AND table_name = 'seasons' 
+        SELECT 1 FROM information_schema.columns
+        WHERE table_schema = 'reference'
+        AND table_name = 'seasons'
         AND column_name = 'updated_at'
     ) THEN
-        ALTER TABLE reference.seasons 
+        ALTER TABLE reference.seasons
         ADD COLUMN updated_at timestamp with time zone DEFAULT NOW();
     END IF;
 END $$;
@@ -21,12 +21,12 @@ END $$;
 DO $$
 BEGIN
     IF NOT EXISTS (
-        SELECT 1 FROM information_schema.columns 
-        WHERE table_schema = 'reference' 
-        AND table_name = 'game_types' 
+        SELECT 1 FROM information_schema.columns
+        WHERE table_schema = 'reference'
+        AND table_name = 'game_types'
         AND column_name = 'updated_at'
     ) THEN
-        ALTER TABLE reference.game_types 
+        ALTER TABLE reference.game_types
         ADD COLUMN updated_at timestamp with time zone DEFAULT NOW();
     END IF;
 END $$;
@@ -35,12 +35,12 @@ END $$;
 DO $$
 BEGIN
     IF NOT EXISTS (
-        SELECT 1 FROM information_schema.columns 
-        WHERE table_schema = 'reference' 
-        AND table_name = 'series' 
+        SELECT 1 FROM information_schema.columns
+        WHERE table_schema = 'reference'
+        AND table_name = 'series'
         AND column_name = 'updated_at'
     ) THEN
-        ALTER TABLE reference.series 
+        ALTER TABLE reference.series
         ADD COLUMN updated_at timestamp with time zone DEFAULT NOW();
     END IF;
 END $$;

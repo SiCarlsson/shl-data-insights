@@ -6,7 +6,7 @@
 [0m22:11:51.335499 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'write_json': 'True', 'warn_error': 'None', 'indirect_selection': 'eager', 'target_path': 'None', 'log_path': 'logs', 'introspect': 'True', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'log_format': 'default', 'cache_selected_only': 'False', 'quiet': 'False', 'profiles_dir': '/Users/scarlsson/.dbt', 'use_colors': 'True', 'invocation_command': 'dbt init', 'partial_parse': 'True', 'static_parser': 'True', 'log_cache_events': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'fail_fast': 'False'}
 [0m22:11:51.360209 [info ] [MainThread]: Creating dbt configuration folder at /Users/scarlsson/.dbt
 [0m22:29:09.562248 [debug] [MainThread]: Starter project path: /Users/scarlsson/Programmering/Current projects/shl-data-insights/venv/lib/python3.13/site-packages/dbt/include/starter_project
-[0m22:29:09.577303 [info ] [MainThread]: 
+[0m22:29:09.577303 [info ] [MainThread]:
 Your new dbt project "shl_data_insights" was created!
 
 For more information on how to configure the profiles.yml file,

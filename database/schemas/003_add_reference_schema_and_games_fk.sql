@@ -55,25 +55,25 @@ CREATE TABLE IF NOT EXISTS reference.series
 );
 
 -- Add reference columns to silver.shl_games (if they don't exist)
-DO $$ 
+DO $$
 BEGIN
-    IF NOT EXISTS (SELECT 1 FROM information_schema.columns 
-                   WHERE table_schema = 'silver' 
-                   AND table_name = 'shl_games' 
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = 'silver'
+                   AND table_name = 'shl_games'
                    AND column_name = 'season_uuid') THEN
         ALTER TABLE silver.shl_games ADD COLUMN season_uuid character varying(50);
     END IF;
-    
-    IF NOT EXISTS (SELECT 1 FROM information_schema.columns 
-                   WHERE table_schema = 'silver' 
-                   AND table_name = 'shl_games' 
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = 'silver'
+                   AND table_name = 'shl_games'
                    AND column_name = 'series_uuid') THEN
         ALTER TABLE silver.shl_games ADD COLUMN series_uuid character varying(50);
     END IF;
-    
-    IF NOT EXISTS (SELECT 1 FROM information_schema.columns 
-                   WHERE table_schema = 'silver' 
-                   AND table_name = 'shl_games' 
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = 'silver'
+                   AND table_name = 'shl_games'
                    AND column_name = 'game_type_uuid') THEN
         ALTER TABLE silver.shl_games ADD COLUMN game_type_uuid character varying(50);
     END IF;
@@ -82,7 +82,7 @@ END $$;
 -- Add foreign key constraints
 ALTER TABLE IF EXISTS silver.shl_games
     DROP CONSTRAINT IF EXISTS "Season uuid";
-    
+
 ALTER TABLE IF EXISTS silver.shl_games
     ADD CONSTRAINT "Season uuid" FOREIGN KEY (season_uuid)
     REFERENCES reference.seasons (season_uuid) MATCH SIMPLE
