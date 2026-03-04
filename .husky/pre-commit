@@ -9,5 +9,5 @@ EXIT_CODE=$?
 if [ "$EXIT_CODE" -ne 0 ]; then
     printf "\n\nPre-commit modified files. Staging and re-committing...\n"
     git add -A
-    git commit --no-verify -m "$(cat .git/COMMIT_EDITMSG)"
+    git commit -m "$(cat .git/COMMIT_EDITMSG)"
 fi
