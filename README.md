@@ -21,8 +21,9 @@ Ingest, transform, and analyze SHL game and player data to provide actionable in
 - Next.js 16
 - PostgreSQL 16
 - TypeScript
+- dbt
 - Vitest
-- Docker
+- Docker (local development only)
 
 ## Installation
 
