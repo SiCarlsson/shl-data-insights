@@ -1,6 +1,6 @@
-black
-ruff
-pre-commit
-pytest
-yamllint
-sqlfluff
+black==25.12.0
+ruff==0.15.2
+pre-commit==4.5.1
+pytest==9.0.2
+yamllint==1.37.1
+sqlfluff==4.0.4clear

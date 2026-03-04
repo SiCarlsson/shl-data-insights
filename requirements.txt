@@ -1,4 +1,10 @@
-httpx
-supabase
-python-dotenv
-dbt-postgres
+httpx==0.28.1
+supabase==2.28.0
+python-dotenv==1.2.1
+dbt-postgres==1.10.0
+urllib3==1.26.20
+chardet==5.2.0
+charset-normalizer==3.3.2
+requests==2.31.0
+psycopg2-binary==2.9.11
+psycopg==3.3.3
