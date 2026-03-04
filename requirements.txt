@@ -1,3 +1,4 @@
 httpx
 supabase
 python-dotenv
+dbt-postgres
