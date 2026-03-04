@@ -1,11 +1,37 @@
 repos:
-  - repo: https://github.com/psf/black
-    rev: 24.3.0
-    hooks:
-      - id: black
+- repo: https://github.com/psf/black
+  rev: 24.3.0
+  hooks:
+  - id: black
 
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.3.0
-    hooks:
-      - id: ruff
-        args: [--fix]
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.3.0
+  hooks:
+  - id: ruff
+    args: [--fix]
+
+- repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
+  rev: v2.14.0
+  hooks:
+  - id: pretty-format-yaml
+    args:
+    - --autofix
+    - --indent=2
+    - --offset=0
+    - --line-width=120
+    - --preserve-quotes
+    exclude: ^web/pnpm-lock.yaml|^web/pnpm-workspace.yaml
+
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.6.0
+  hooks:
+  - id: trailing-whitespace
+    args: [--markdown-linebreak-ext=md]
+  - id: end-of-file-fixer
+
+- repo: https://github.com/adrienverge/yamllint
+  rev: v1.35.1
+  hooks:
+  - id: yamllint
+    args: [-c=.yamllint.yml]
+    exclude: ^web/pnpm-lock.yaml|^web/pnpm-workspace.yaml

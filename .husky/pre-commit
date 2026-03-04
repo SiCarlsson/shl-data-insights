@@ -1,3 +1,11 @@
 cd web && pnpm exec lint-staged
 cd ..
-source venv/bin/activate && pre-commit run
+
+source venv/bin/activate
+pre-commit run
+
+# If pre-commit modified files, stage and re-run to verify
+if ! git diff --quiet; then
+    git add -A
+    pre-commit run
+fi
