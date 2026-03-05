@@ -18,6 +18,8 @@ Ingest, transform, and analyze SHL game and player data to provide actionable in
 
 ## Tech Stack
 
+- Vercel (deployment)
+- Supabase (database hosting)
 - Next.js 16
 - PostgreSQL 16
 - TypeScript
